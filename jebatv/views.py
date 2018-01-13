@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 
 def index(request):
-    return HttpResponse("Bienvenue sur une prémice de site web")
+	return render(request, 'index.html', {})
