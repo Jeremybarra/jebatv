@@ -19,7 +19,6 @@
 		</nav>
 		<div class="main">
 			{% for episode in episodes %}
-				<p>{{ episode.content.url }}</p>
 				<video width="100%" height="100%" controls>
 					<source src="{{ episode.content.url }}"" type="video/mp4" />
 					Votre navigateur n'est surement pas à jour
