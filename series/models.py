@@ -4,6 +4,7 @@ from jebatv.models import Media
 class Serie(models.Model):
 	title = models.CharField(verbose_name="Titre", max_length=200)
 	description = models.TextField(verbose_name="Description", default="Aucune description renseignée")
+	image = models.FileField(upload_to="", default='/static/series/pictures/placeholder_series.png')
 
 	def __str__(self):
 		return self.title
