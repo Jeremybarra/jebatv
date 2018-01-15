@@ -1,20 +1,21 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load static %}
 
 {% block title %}Un bon choix de série{% endblock %}
 
+{% block css %}
+	{{ block.super}}
+	<link rel="stylesheet" href="{% static "series/css/series.css" %}" type"text/css" />
+{% endblock %}
+
 {% block content %}
-	{% for serie in series %}
-		<div class="serie">
-			<h2><a href="{{ serie.id }}">{{ serie.title}}</a></h2>
-			<p> {{ serie.description }} </p>			
-			<div class="season">
-				<ul>
-					{% for season in seasons %}
-						<li>{{ season.name }}</li>
-					{% endfor %}	
-				</ul>
-			</div>
-		</div>
-	{% endfor %}
+	<div class="series">
+		{% for serie in series %}
+			<div class="serie">
+				<a href="{{ serie.id }}"><img class="img"src="{{ serie.image.url }}" height="587" width="294" /></a>
+				<h2><a class="title">{{ serie.title}}</a></h2>
+				<p> {{ serie.description }} </p>
+			</div>		
+		{% endfor %}
+	</div>
 {% endblock %}

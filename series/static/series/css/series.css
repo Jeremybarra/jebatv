@@ -1,0 +1,21 @@
+.series{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.series .serie{
+	height: 670px;
+	width: 294px;
+	overflow-y: hidden;
+	margin: 0px 3px 10px 3px;
+}
+
+.series h2{
+	text-align: center;
+}
+
+.series .img{
+	cursor: pointer;
+}
