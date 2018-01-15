@@ -1,29 +1,13 @@
+{% extends "base.html" %}
 {% load staticfiles %}
-<html>
-	<head>
-		<title>Un bon choix de séries</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-	</head>
-	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <a class="navbar-brand" href="/">Jeba TV</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-		    <ul class="navbar-nav">
-		      <li class="nav-item">
-		        <a class="nav-link" href="/series">Séries</a>
-		    </ul>
-		  </div>
-		</nav>
-		<div class="main">
-			{% for episode in episodes %}
-				<video width="100%" height="100%" controls>
-					<source src="{{ episode.content.url }}"" type="video/mp4" />
-					Votre navigateur n'est surement pas à jour
-				</video> 
-			{% endfor %}
-		</div>
-	</body>
-</html>
+
+{% block title %}Un bon choix de séries{% endblock %}
+
+{% block content %}
+	{% for episode in episodes %}
+		<video width="100%" height="100%" controls>
+			<source src="{{ episode.content.url }}"" type="video/mp4" />
+			Votre navigateur n'est surement pas à jour
+		</video> 
+	{% endfor %}
+{% endblock %}
