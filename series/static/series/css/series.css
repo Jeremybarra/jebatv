@@ -1,3 +1,7 @@
+body {
+	font-family: Verdana, sans-serif;
+}
+
 .series{
 	width: 100%;
 	display: flex;
@@ -19,3 +23,78 @@
 .series .img{
 	cursor: pointer;
 }
+
+/****************** BANNER *************************/
+
+* {
+	box-sizing: border-box;
+}
+
+.slide {
+	display: none;
+	position: relative;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  max-height: 185px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/***************************************************/
